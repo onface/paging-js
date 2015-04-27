@@ -1,0 +1,27 @@
+{
+  "name": "paging",
+  "version": "0.0.0",
+  "description": "paging generator | 分页生成器",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nimojs/paging"
+  },
+  "keywords": [
+    "paging",
+    "page",
+    "navigation"
+  ],
+  "author": "nimojs <nimo.jser@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nimojs/paging/issues"
+  },
+  "homepage": "https://github.com/nimojs/paging",
+  "spm": {
+    
+  }
+}
