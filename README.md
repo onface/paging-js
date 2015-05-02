@@ -39,13 +39,18 @@ var html = Paging.render({
 document.getElementById('view').innerHTML = html
 </script>
 ````
+## bower
+
+```html
+$ bower install --save paging.js
+
+<script type="text/javascript" src="./bower_components/paging.js/dist/paging.js"></script>
+```
 
 ## seajs
 
 
 ````iframe:40
-
-
 <link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
 <script src="http://static.nimojs.com/umd/seajs/3.0.0/sea.js" id="seajsnode" ></script>
 
