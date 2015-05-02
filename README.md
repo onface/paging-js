@@ -19,7 +19,7 @@ if (/spmjs/.test(location.hostname)) {
 
 简单自由的分页生成器
 
-## 浏览器中使用 [UMD](https://github.com/nimojs/blog/issues/21)
+## 浏览器中使用
 
 ````iframe:40
 <link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
@@ -42,21 +42,25 @@ document.getElementById('view').innerHTML = html
 
 ## seajs
 
-[http://cmd.nimojs.com/cmd/paging/0.0.1/index.js](http://cmd.nimojs.com/cmd/paging/0.0.1/index.js)
 
 ````iframe:40
+
+
 <link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
-<script src="http://cmd.nimojs.com/examples/js/sea-v3.0.0.js" id="seajsnode" ></script>
+<script src="http://static.nimojs.com/umd/seajs/3.0.0/sea.js" id="seajsnode" ></script>
 
 <div id="view"></div>
 
 <script>
 seajs.config({
-    // 配置 base 路径（必须）
-    base: 'http://cmd.nimojs.com/cmd/'
+    // 配置 alias 使用在线版本或下载 paging 和 mustache 存放在本地
+    // 下载到本地使用时请注意 《ID 和路径匹配原则》https://github.com/seajs/seajs/issues/930
+    alias: {
+        "paging/0.0.1/paging": 'http://cmd.nimojs.com/cmd/paging/0.0.1/paging.js',
+        "mustache/2.0.0/mustache": "http://cmd.nimojs.com/cmd/mustache/2.0.0/mustache.js"
+    }
 })
-
-seajs.use(['paging/0.0.1/index'] ,function (Paging) {
+seajs.use('paging/0.0.1/paging' ,function (Paging) {
     var html = Paging.render({
         // 当前页
         currentPage: 1,

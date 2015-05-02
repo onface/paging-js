@@ -1,3 +1,4 @@
+/*! Paging 3.0.0 | http://spmjs.io/docs/paging/0.0.1/ */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
