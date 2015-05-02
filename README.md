@@ -12,7 +12,7 @@
 </div>
 
 <script>
-if (/spmjs/.test(location.hostname)) {
+if (/^\/docs\/paging\//.test(location.pathname)) {
     document.getElementById('online-tip').style.display = 'none'
 }
 </script>
