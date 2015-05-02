@@ -1,0 +1,20 @@
+{
+  "name": "paging",
+  "main": "paging.js",
+  "version": "0.0.1",
+  "homepage": "http://spmjs.io/docs/paging/latest/",
+  "authors": [
+    "nimojs <nimo.jser@gmail.com>"
+  ],
+  "keywords": [
+    "paging"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
