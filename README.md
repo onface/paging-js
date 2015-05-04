@@ -4,7 +4,7 @@
 
 <div id="online-tip">
 <strong>
-  请访问 <a href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">在线文档: v0.0.1</a>
+  请访问 <a href="http://spmjs.io/docs/paging/0.0.1/">在线文档: v0.0.1</a>
   或 <a href="http://spmjs.io/docs/paging/latest/">最新版本</a>
 </strong>
 <br><br>
