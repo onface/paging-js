@@ -130,6 +130,6 @@ for (var i = 1;i < 11; i++) {
 
 1. [自定义界面](examples/index.md)
 2. [AJAX无刷新分页](examples/ajax.md)
-3. [控制前后几页显示数量](examples/beforePageCount.md)
+3. [控制前后几页显示数量](examples/before-page-count.md)
 4. [bootstrap 分页](examples/bootstrap.md)
 5. [handlebars & createData](handlebars.md)
