@@ -4,7 +4,7 @@
 
 <div id="online-tip">
 <strong>
-  请访问 <a href="http://spmjs.io/docs/paging/0.0.1/">在线文档: v0.0.1</a>
+  请访问 <a href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">在线文档: v0.0.1</a>
   或 <a href="http://spmjs.io/docs/paging/latest/">最新版本</a>
 </strong>
 <br><br>
@@ -22,7 +22,7 @@ if (/^\/docs\/paging\//.test(location.pathname)) {
 ## 浏览器中使用
 
 ````iframe:40
-<link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
+<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
 <script src="http://static.nimojs.com/umd/paging/0.0.1/paging.js"></script>
 
 <div id="view"></div>
@@ -51,7 +51,7 @@ $ bower install --save paging.js
 
 
 ````iframe:40
-<link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
+<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
 <script src="http://static.nimojs.com/umd/seajs/3.0.0/sea.js" id="seajsnode" ></script>
 
 <div id="view"></div>
@@ -100,7 +100,7 @@ var Paging = require('paging');
 
 
 ````iframe:205
-<link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
+<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
 <script src="http://static.nimojs.com/umd/paging/0.0.1/paging.js"></script>
 <div id="view1"></div><hr>
 <div id="view2"></div><hr>

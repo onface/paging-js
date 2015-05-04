@@ -7,7 +7,7 @@
 
 
 ````iframe:180
-<link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
+<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
 <script src="http://static.nimojs.com/umd/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://static.nimojs.com/umd/paging/0.0.1/paging.js"></script>
 <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v3.0.0.js"></script>

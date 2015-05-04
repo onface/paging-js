@@ -9,7 +9,7 @@ Paging 是基于 [Mustache](https://github.com/janl/mustache.js) 模板引擎渲
 
 
 ````iframe:40
-<link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
+<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
 <script src="http://static.nimojs.com/umd/paging/0.0.1/paging.js"></script>
 
 <div id="view-template"></div>

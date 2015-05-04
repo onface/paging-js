@@ -4,11 +4,11 @@
 
 ## 显示前2页与后1页
 
-<link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
+<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
 <script src="http://static.nimojs.com/umd/paging/0.0.1/paging.js"></script>
 
 ````iframe:40
-<link rel="stylesheet" href="http://spmjs.io/docs/alice-paging/1.1.0/index.css">
+<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
 <script src="http://static.nimojs.com/umd/paging/0.0.1/paging.js"></script>
 <div id="view"></div>
 
