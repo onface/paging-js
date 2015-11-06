@@ -6,8 +6,8 @@
   "github": {
     "author": "nimojs"
   },
-  "dependencies": [
-    "rains-components/mustache.js@2.2.0"
-  ],
+  "dependencies": {
+    "rains-components/mustache.js": "2.2.0"
+  },
   "main": "paging.js"
 }
