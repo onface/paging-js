@@ -40,7 +40,7 @@
         {{#_beforePages}}
         <a class="paging-item" href="{{../_link}}{{.}}">{{.}}</a>
         {{/_beforePages}}
-        <a href="{{_link}}{{_currentPage}}" class="paging-item paging-current">{{_currentPage}}</a>
+        <a href="{{_link}}{{_page}}" class="paging-item paging-current">{{_page}}</a>
         {{#_afterPages}}
         <a class="paging-item" href="{{../_link}}{{.}}">{{.}}</a>
         {{/_afterPages}}
@@ -53,7 +53,7 @@
         <{{#_nextPage}}a{{/_nextPage}}{{^_nextPage}}span{{/_nextPage}} class="paging-next" href="{{_link}}{{_nextPage}}">
             下一页
         </{{#_nextPage}}a{{/_nextPage}}{{^_nextPage}}span{{/_nextPage}}>
-        <span class="paging-info"><span class="paging-bold">{{_currentPage}}/{{_pageCount}}</span>页</span>
+        <span class="paging-info"><span class="paging-bold">{{_page}}/{{_pageCount}}</span>页</span>
     </div>
 {{/_hasPaging}}
 </script>
@@ -82,7 +82,7 @@ var data = {
 
 console.log(
 $.extend(data, Paging.createData({
-    currentPage: 3,
+    page: 3,
     pageCount: data.pagecount
 }))
 )
@@ -131,13 +131,13 @@ $('#view').html(
 
 ````
 
-**注意：**因为语法的差异在 Handlebars 中需将 
+**注意：**因为语法的差异在 Handlebars 中需将
 
 ```html
 {{#_beforePages}}
 <a class="paging-item" href="{{_link}}{{.}}">{{.}}</a>
 {{/_beforePages}}
-<a href="{{_link}}{{_currentPage}}" class="paging-item paging-current">{{_currentPage}}</a>
+<a href="{{_link}}{{_page}}" class="paging-item paging-current">{{_page}}</a>
 {{#_afterPages}}
 <a class="paging-item" href="{{_link}}{{.}}">{{.}}</a>
 {{/_afterPages}}
@@ -149,7 +149,7 @@ $('#view').html(
 {{#_beforePages}}
 <a class="paging-item" href="{{../_link}}{{.}}">{{.}}</a>
 {{/_beforePages}}
-<a href="{{_link}}{{_currentPage}}" class="paging-item paging-current">{{_currentPage}}</a>
+<a href="{{_link}}{{_page}}" class="paging-item paging-current">{{_page}}</a>
 {{#_afterPages}}
 <a class="paging-item" href="{{../_link}}{{.}}">{{.}}</a>
 {{/_afterPages}}

@@ -48,7 +48,7 @@ var goto = function (page) {
         var listhtml = Paging.mustache.render($listTemplate.html(), data)
 
         var paginghtml = Paging.render({
-            currentPage: page,
+            page: page,
             pageCount: data.pagecount,
             link:''
         })

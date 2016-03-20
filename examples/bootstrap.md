@@ -31,7 +31,7 @@
           <a href="{{_link}}{{.}}">{{.}}</a>
         </li>
         {{/_beforePages}}
-        <li class="active"><a href="{{_link}}{{_currentPage}}">{{_currentPage}}</a></li>
+        <li class="active"><a href="{{_link}}{{_page}}">{{_page}}</a></li>
         {{#_afterPages}}
         <li>
             <a href="{{_link}}{{.}}">{{.}}</a>
@@ -60,7 +60,7 @@
 <script>
 var html = Paging.render({
     // 当前页
-    currentPage: 1,
+    page: 1,
     // 总页数
     pageCount: 10,
     // 链接前缀

@@ -30,7 +30,7 @@ if (/^\/docs\/paging\//.test(location.pathname)) {
 <script>
 var html = Paging.render({
     // 当前页
-    currentPage: 2,
+    page: 2,
     // 总页数
     pageCount: 10,
     // 链接前缀
@@ -68,7 +68,7 @@ seajs.config({
 seajs.use('paging/0.0.1/paging' ,function (Paging) {
     var html = Paging.render({
         // 当前页
-        currentPage: 1,
+        page: 1,
         // 总页数
         pageCount: 10,
         // 链接前缀
@@ -116,7 +116,7 @@ var Paging = require('paging');
 <script>
 for (var i = 1;i < 11; i++) {
     document.getElementById('view' + i).innerHTML = Paging.render({
-        currentPage: i,
+        page: i,
         pageCount: 10,
         beforePageCount: 10,
         afterPageCount: 10,

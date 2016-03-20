@@ -15,7 +15,7 @@
 <script>
 var html = Paging.render({
     // 当前页
-    currentPage: 5,
+    page: 5,
     // 总页数
     pageCount: 10,
     // 前几页显示数量

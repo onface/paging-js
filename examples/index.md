@@ -20,7 +20,7 @@
         {{#_beforePages}}
         <a class="paging-item" href="{{_link}}{{.}}">{{.}}</a>
         {{/_beforePages}}
-        <a href="{{_link}}{{_currentPage}}" class="paging-item paging-current">{{_currentPage}}</a>
+        <a href="{{_link}}{{_page}}" class="paging-item paging-current">{{_page}}</a>
         {{#_afterPages}}
         <a class="paging-item" href="{{_link}}{{.}}">{{.}}</a>
         {{/_afterPages}}
@@ -33,7 +33,7 @@
         <{{#_nextPage}}a{{/_nextPage}}{{^_nextPage}}span{{/_nextPage}} class="paging-next" href="{{_link}}{{_nextPage}}">
             下一页
         </{{#_nextPage}}a{{/_nextPage}}{{^_nextPage}}span{{/_nextPage}}>
-        <span class="paging-info"><span class="paging-bold">{{_currentPage}}/{{_pageCount}}</span>页</span>
+        <span class="paging-info"><span class="paging-bold">{{_page}}/{{_pageCount}}</span>页</span>
     </div>
 {{/_hasPaging}}
 </script>
@@ -74,7 +74,7 @@
 <script>
 var html = Paging.render({
     // 当前页
-    currentPage: 4,
+    page: 4,
     // 总页数
     pageCount: 10,
     // 链接前缀
