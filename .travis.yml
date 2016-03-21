@@ -15,4 +15,4 @@ install:
 - npm install mocha -g
 - npm install expect.js
 script:
-mocha
+- mocha
