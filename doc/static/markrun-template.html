@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" ></meta>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<!--[if lte IE 10]>
+  <script src="/doc/vendor/polyfill/main.js" ></script>
+ <![endif]-->
+<script src="/doc/vendor/jquery/3.1.1/jquery.min.js" ></script>
+<link rel="stylesheet" href="/doc/static/doc.css">
+<title> <%- title %></title>
+</head>
+<body >
+<div class="fastboot-nav">
+    <ul>
+        <li class="fastboot-nav-title" ><%- package.__boot.owner %>/<%- package.name %></li>
+        <li><a href="/README.md">Home</a></li>
+        <li><a href="/doc/README.md">Document</a></li>
+        <li><a href="/example/README.md">Example</a></li>
+        <li><a href="/test/README.md">Test</a></li>
+        <li>Version: <select id="fastbootVersionSelect"><option value="">latest</option><option value="">loading...</option></select></li>
+        <li>
+            <iframe src="https://ghbtns.com/github-btn.html?user=<%= package.__boot.owner %>&repo=<%= package.__boot.repo %>&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px" class="github-btn"  ></iframe>
+        </li>
+    </ul>
+</div>
+<div class="markdown-body" >
+    <%- content %>
+</div>
+<a href="https://github.com/<%= package.__boot.owner %>/<%= package.__boot.repo %>">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" />
+</a>
+<script>
+window.FASTBOOT = {
+    package: {
+        name: "<%- package.name %>",
+        homepage: "<%- package.homepage %>"
+    }
+};
+
+if (!/\/$/.test(window.FASTBOOT.package.homepage)) {
+    window.FASTBOOT.package.homepage = window.FASTBOOT.package.homepage + '/'
+}
+</script>
+<script src="/doc/static/doc.js"></script>
+</body>
+</html>

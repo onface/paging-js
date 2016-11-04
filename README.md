@@ -1,65 +1,81 @@
-# Paging
+# <%= name %>
 
----
+> <%= description %>
 
 
-简单自由的分页生成器
+<!-- MARKRUN-HTML <div style="display:none;"  > -->
 
-## 浏览器中使用
+[🔗 Live demo](<%= homepage %>)  
+[🕐 Releases](https://github.com/<%= __boot.owner %>/<%= __boot.repo %>/releases)
 
-````iframe:40
-<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
-<script src="http://static.nimojs.com/umd/paging/0.0.1/paging.js"></script>
+<!-- MARKRUN-HTML </div> -->
 
-<div id="view"></div>
+[![Build Status](https://api.travis-ci.org/<%= __boot.owner %>/<%= __boot.repo %>.svg)](https://travis-ci.org/<%= __boot.owner %>/<%= __boot.repo %>) [![NPM version](https://img.shields.io/npm/v/<%= name %>.svg?style=flat)](https://npmjs.org/package/<%= name %>) [![NPM downloads](http://img.shields.io/npm/dm/<%= name %>.svg?style=flat)](https://npmjs.org/package/<%= name %>)
 
-<script>
-var html = Paging.render({
-    // 当前页
-    page: 2,
-    // 总页数
-    pageCount: 10,
-    // 链接前缀
-    link: '?id='
-})
-document.getElementById('view').innerHTML = html
-</script>
+<!-- MARKRUN-HTML <div style="display:none;"  > -->
+
+🌀 [Example](./example/README.md) 🌀 [Doc](./doc/README.md) 🌀 [Test](./test/README.md)  
+
+<!-- MARKRUN-HTML </div> -->
+
+## 📦 Install
+
+```shell
+npm i <%= name %> --save
+```
+
+## 📄 Usage
+
+````html
+<div id="demo"></div>
 ````
 
-## 显示总页数为 10 的分页
-
-
-````iframe:205
-<link rel="stylesheet" href="http://static.nimojs.com/umd/alice-paging/1.1.0/index.css">
-<script src="http://static.nimojs.com/umd/paging/0.0.1/paging.js"></script>
-<div id="view1"></div><hr>
-<div id="view2"></div><hr>
-<div id="view3"></div><hr>
-<div id="view4"></div><hr>
-<div id="view5"></div><hr>
-<div id="view6"></div><hr>
-<div id="view7"></div><hr>
-<div id="view8"></div><hr>
-<div id="view9"></div><hr>
-<div id="view10"></div>
-
-<script>
-for (var i = 1;i < 11; i++) {
-    document.getElementById('view' + i).innerHTML = Paging.render({
-        page: i,
-        pageCount: 10,
-        beforePageCount: 10,
-        afterPageCount: 10,
-        link: '#view'
-    })    
-}
-</script>
+````js
+var Some = require('<%= name %>')
+// Some(element, string)
+Some(document.getElementById('demo'), 'abc')
 ````
 
-## 更多示例
+<!--MARKRUN-HTML
+<style>.gc-comments {font:12px/1.5 Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}</style>
+<script src="https://unpkg.com/github-comments@latest/gc.js"></script>
+<div class="gc-comments" data-repos="<%= __boot.owner %>/<%= __boot.repo %>" data-issues="1" >
+    <div class="gc-comments-title">
+        Comments
+    </div>
+    <div class="gc-comments-info">
+        Synchronous comments <a target="_blank" href="issues_link">issues_link</a>
+    </div>
+</div>
+-->
 
-1. [自定义界面](examples/index.md)
-2. [AJAX无刷新分页](examples/ajax.md)
-3. [控制前后几页显示数量](examples/before-page-count.md)
-4. [bootstrap 分页](examples/bootstrap.md)
-5. [handlebars & createData](examples/handlebars.md)
+## 🔨 development
+
+```shell
+npm i -g fis3 --registry=https://registry.npm.taobao.org
+# Install dependencies | 安装依赖
+npm run dep
+    # > Suggested Use `yarn` replace `npm run dep` | 建议使用 `yarn` 替代 `npm run dep`
+    # npm i -g yarn
+    # npm run yi
+
+# Server
+npm run s
+
+# Build
+npm run dev
+
+
+#  build document ./output | 构建 gh-pages 版本 到 output/
+npm run gh
+#  git push ./output branch:gh-pages | 将 output/** 发布到 gh-pages 分支
+npm run gh-push
+# build commonjs code ./output | 构建 npm 要发布的代码到 output/
+npm run npm
+cd ./output
+npm publish
+```
+
+Build based on [fast-boot](https://github.com/fast-flow/boot#es6)
+
+> For npm owner: npm publish Need to be in ./output
