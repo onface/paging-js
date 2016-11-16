@@ -1,18 +1,13 @@
-# <%= name %>
+# paging
 
-> <%= description %>
+> Paging generator,Completely custom style. 简单自由的分页生成器
 
-
-<!-- MARKRUN-HTML <div style="display:none;"  > -->
-
-[🔗 Live demo](<%= homepage %>)  
-[🕐 Releases](https://github.com/<%= __boot.owner %>/<%= __boot.repo %>/releases)
-
-<!-- MARKRUN-HTML </div> -->
-
-[![Build Status](https://api.travis-ci.org/<%= __boot.owner %>/<%= __boot.repo %>.svg)](https://travis-ci.org/<%= __boot.owner %>/<%= __boot.repo %>) [![NPM version](https://img.shields.io/npm/v/<%= name %>.svg?style=flat)](https://npmjs.org/package/<%= name %>) [![NPM downloads](http://img.shields.io/npm/dm/<%= name %>.svg?style=flat)](https://npmjs.org/package/<%= name %>)
+ [![NPM version](https://img.shields.io/npm/v/paging.svg?style=flat)](https://npmjs.org/package/paging) [![NPM downloads](https://img.shields.io/npm/dt/paging.svg)](https://npmjs.org/package/paging)
 
 <!-- MARKRUN-HTML <div style="display:none;"  > -->
+
+[🔗 Live demo](https://paging.github.io/paging-js/)  
+[🕐 Releases](https://github.com/paging/paging-js/releases)
 
 🌀 [Example](./example/README.md) 🌀 [Doc](./doc/README.md) 🌀 [Test](./test/README.md)  
 
@@ -21,7 +16,7 @@
 ## 📦 Install
 
 ```shell
-npm i <%= name %> --save
+npm i paging --save
 ```
 
 ## 📄 Usage
@@ -31,15 +26,26 @@ npm i <%= name %> --save
 ````
 
 ````js
-var Some = require('<%= name %>')
-// Some(element, string)
-Some(document.getElementById('demo'), 'abc')
+var paging = require('paging')
+console.log(
+    paging.createData({
+        page: 1,
+        pageCount: 10
+    })
+)
+console.log(
+    paging.createData({
+        page: 5,
+        dataCount: 200,
+        pageSize: 10
+    })
+)
 ````
 
 <!--MARKRUN-HTML
 <style>.gc-comments {font:12px/1.5 Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}</style>
 <script src="https://unpkg.com/github-comments@latest/gc.js"></script>
-<div class="gc-comments" data-repos="<%= __boot.owner %>/<%= __boot.repo %>" data-issues="1" >
+<div class="gc-comments" data-repos="paging/paging-js" data-issues="1" >
     <div class="gc-comments-title">
         Comments
     </div>

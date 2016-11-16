@@ -2,3 +2,8 @@ _site
 spm_modules
 node_modules
 bower_components
+node_modules
+.DS_Store
+npm-debug.log
+output
+npm-debug.log
