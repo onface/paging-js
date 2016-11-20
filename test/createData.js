@@ -76,4 +76,131 @@ describe('#createData.js', function() {
         })
         expect(output.isLastPage).to.eql(false)
     })
+    it('prevBatch page 10', function () {
+        var output = paging.createData({
+            page: 10,
+            pageCount: 20
+        })
+        expect(output.prevBatch).to.eql([7,8,9])
+    })
+    it('prevBatch page 1', function () {
+        var output = paging.createData({
+            page: 1,
+            pageCount: 20
+        })
+        expect(output.prevBatch).to.eql([])
+    })
+    it('prevBatch page 2', function () {
+        var output = paging.createData({
+            page: 2,
+            pageCount: 20
+        })
+        expect(output.prevBatch).to.eql([])
+    })
+    it('prevBatch page 3', function () {
+        var output = paging.createData({
+            page: 3,
+            pageCount: 20
+        })
+        expect(output.prevBatch).to.eql([ 2])
+    })
+    it('prevBatch page 4', function () {
+        var output = paging.createData({
+            page: 4,
+            pageCount: 20
+        })
+        expect(output.prevBatch).to.eql([ 2, 3])
+    })
+    it('prevBatch page 5', function () {
+        var output = paging.createData({
+            page: 5,
+            pageCount: 20
+        })
+        expect(output.prevBatch).to.eql([ 2, 3, 4 ])
+    })
+    it('prevHasMorePage page 4', function () {
+        var output = paging.createData({
+            page: 4,
+            pageCount: 20
+        })
+        expect(output.prevHasMorePage).to.eql(false)
+    })
+    it('prevHasMorePage page 5', function () {
+        var output = paging.createData({
+            page: 5,
+            pageCount: 20
+        })
+        expect(output.prevHasMorePage).to.eql(false)
+    })
+    it('prevHasMorePage page 6', function () {
+        var output = paging.createData({
+            page: 6,
+            pageCount: 20
+        })
+        expect(output.prevHasMorePage).to.eql(true)
+    })
+    it('prevHasMorePage page 7', function () {
+        var output = paging.createData({
+            page: 7,
+            pageCount: 20
+        })
+        expect(output.prevHasMorePage).to.eql(true)
+    })
+    it('nextBatch page 1', function () {
+        var output = paging.createData({
+            page: 1,
+            pageCount: 20
+        })
+        expect(output.nextBatch).to.eql([ 2, 3, 4])
+    })
+    it('nextBatch page 2', function () {
+        var output = paging.createData({
+            page: 2,
+            pageCount: 20
+        })
+        expect(output.nextBatch).to.eql([ 3, 4, 5 ])
+    })
+    it('nextBatch page 15', function () {
+        var output = paging.createData({
+            page: 15,
+            pageCount: 20
+        })
+        expect(output.nextBatch).to.eql([16, 17, 18])
+    })
+    it('nextBatch page 16', function () {
+        var output = paging.createData({
+            page: 16,
+            pageCount: 20
+        })
+        expect(output.nextBatch).to.eql([17, 18, 19 ])
+    })
+    it('nextBatch page 17', function () {
+        var output = paging.createData({
+            page: 17,
+            pageCount: 20
+        })
+        expect(output.nextBatch).to.eql([ 18, 19 ])
+    })
+    it('nextBatch page 18', function () {
+        var output = paging.createData({
+            page: 18,
+            pageCount: 20
+        })
+        expect(output.nextBatch).to.eql([ 19 ])
+    })
+    it('nextBatch page 19', function () {
+        var output = paging.createData({
+            page: 19,
+            pageCount: 20
+        })
+        expect(output.nextBatch).to.eql([])
+    })
+    it('nextBatch page 20', function () {
+        var output = paging.createData({
+            page: 20,
+            pageCount: 20
+        })
+        expect(output.nextBatch).to.eql([])
+    })
+
 })
