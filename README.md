@@ -32,6 +32,30 @@ console.log(
         pageCount: 10
     })
 )
+````
+
+```js
+{
+    "hasPaging": false,
+    "pageCount": 10,
+    "dataCount": null,
+    "page": 1,
+    "isFirstPage": true,
+    "isLastPage": false,
+    "prevBatch": [],
+    "nextBatch": [2,3,4],
+    "prevPage": false,
+    "nextPage": false,
+    "prevHasMorePage": false,
+    "nextHasMorePage": true,
+    "prevSomePage": 1,
+    "nextSomePage": 6,
+    "pageSize": null
+}
+```
+
+````js
+var paging = require('paging')
 console.log(
     paging.createData({
         page: 5,
@@ -41,10 +65,30 @@ console.log(
 )
 ````
 
+```js
+{
+    "hasPaging": false,
+    "pageCount": 20,
+    "dataCount": 200,
+    "page": 5,
+    "isFirstPage": false,
+    "isLastPage": false,
+    "prevBatch": [2, 3, 4],
+    "nextBatch": [6, 7, 8],
+    "prevPage": 4,
+    "nextPage": false,
+    "prevHasMorePage": false,
+    "nextHasMorePage": true,
+    "prevSomePage": 1,
+    "nextSomePage": 10,
+    "pageSize": 10
+}
+```
+
 <!--MARKRUN-HTML
 <style>.gc-comments {font:12px/1.5 Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif}</style>
 <script src="https://unpkg.com/github-comments@latest/gc.js"></script>
-<div class="gc-comments" data-repos="paging/paging-js" data-issues="1" >
+<div class="gc-comments" data-repos="paging/paging-js" data-issues="5" >
     <div class="gc-comments-title">
         Comments
     </div>
