@@ -36,11 +36,9 @@
     "test": ""
   },
   "dependencies": {
-    "classnames": "^2.2.5",
+    "ejs": "^2.5.2",
     "extend": "^3.0.0",
-    "prop-types": "^0.2.0",
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8"
+    "prop-types": "^0.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
