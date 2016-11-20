@@ -1,7 +1,8 @@
 # paging
 
 > Paging generator,Completely custom style. 简单自由的分页生成器
- [![Build Status](https://api.travis-ci.org/paging/paging-js.svg)](https://travis-ci.org/paging/paging-js) [![NPM version](https://img.shields.io/npm/v/paging.svg?style=flat)](https://npmjs.org/package/paging) [![NPM downloads](https://img.shields.io/npm/dt/paging.svg)](https://npmjs.org/package/paging)
+
+ [![NPM version](https://img.shields.io/npm/v/paging.svg?style=flat)](https://npmjs.org/package/paging) [![NPM downloads](https://img.shields.io/npm/dt/paging.svg)](https://npmjs.org/package/paging)
 
 <!-- MARKRUN-HTML <div style="display:none;"  > -->
 
