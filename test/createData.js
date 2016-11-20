@@ -48,4 +48,32 @@ describe('#createData.js', function() {
         })
         expect(output.page).to.eql(4)
     })
+    it('isFirstPage true', function () {
+        var output = paging.createData({
+            page: 1,
+            pageCount: 4
+        })
+        expect(output.isFirstPage).to.eql(true)
+    })
+    it('isFirstPage false', function () {
+        var output = paging.createData({
+            page: 2,
+            pageCount: 4
+        })
+        expect(output.isFirstPage).to.eql(false)
+    })
+    it('isLastPage true', function () {
+        var output = paging.createData({
+            page: 4,
+            pageCount: 4
+        })
+        expect(output.isLastPage).to.eql(true)
+    })
+    it('isLastPage false', function () {
+        var output = paging.createData({
+            page: 3,
+            pageCount: 4
+        })
+        expect(output.isLastPage).to.eql(false)
+    })
 })
