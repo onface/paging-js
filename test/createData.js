@@ -381,4 +381,18 @@ describe('#createData.js', function() {
         })
         expect(output.nextBatch).to.eql([])
     })
+    it('nextPage page 19 pageCount 20', function () {
+        var output = paging.createData({
+            page: 19,
+            pageCount: 20
+        })
+        expect(output.nextPage).to.eql(20)
+    })
+    it('nextPage page 20 pageCount 20', function () {
+        var output = paging.createData({
+            page: 20,
+            pageCount: 20
+        })
+        expect(output.nextPage).to.eql(false)
+    })
 })
