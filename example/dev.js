@@ -7,3 +7,6 @@ if (document.getElementById('renderNode')) {
 if (document.getElementById('ajaxNode')) {
     require('./ajax.demo.js')
 }
+if (document.getElementById('moreOptionMore')) {
+    require('./more-option.demo.js')
+}

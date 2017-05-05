@@ -39,3 +39,15 @@
     file: './ajax.demo.js'
 }
 ````
+
+## more option
+
+
+````demo
+{
+    title: 'more option',
+    html: '<div id="moreOptionMore"></div>',
+    desc: '`prevBatch:1` `nextBatch:1` `prevSomePage:10` `nextSomePage:10`',
+    file: './more-option.demo.js'
+}
+````
