@@ -4,3 +4,6 @@ if (document.getElementById('createDataNode')) {
 if (document.getElementById('renderNode')) {
     require('./render.demo.js')
 }
+if (document.getElementById('ajaxNode')) {
+    require('./ajax.demo.js')
+}

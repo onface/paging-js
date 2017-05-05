@@ -72,6 +72,20 @@ describe('#createData.js', function() {
         })
         expect(output.isLastPage).to.eql(true)
     })
+    it('Number(page)', function () {
+        var output = paging.createData({
+            page: "4",
+            pageCount: 4
+        })
+        expect(output.isLastPage).to.eql(true)
+    })
+    it('Number(pageCount)', function () {
+        var output = paging.createData({
+            page: "4",
+            pageCount: "4"
+        })
+        expect(output.isLastPage).to.eql(true)
+    })
     it('isLastPage false', function () {
         var output = paging.createData({
             page: 3,

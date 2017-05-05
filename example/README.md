@@ -27,3 +27,15 @@
     file: './createData.demo.js'
 }
 ````
+
+
+## ajax
+
+````demo
+{
+    title: 'render',
+    html: '<div id="ajaxNode"></div>',
+    desc: '',
+    file: './ajax.demo.js'
+}
+````
