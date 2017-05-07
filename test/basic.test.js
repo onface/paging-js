@@ -29,6 +29,14 @@ describe('#createData.js', function() {
         })
         expect(output.pageCount).to.eql(11)
     })
+    it('page === 0', function () {
+        var output = paging.createData({
+            page: -1,
+            dataCount: 1,
+            pageSize: 10
+        })
+        expect(output.nextBatch).to.eql([])
+    })
     it('hasPaging dataCount 1', function () {
         var output = paging.createData({
             page: 1,
