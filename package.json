@@ -1,7 +1,7 @@
 {
   "name": "paging",
   "main": "lib/index.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Paging generator,Completely custom style. 简单自由的分页生成器",
   "repository": "paging/paging-js",
   "homepage": "http://paging.github.io/paging-js",
