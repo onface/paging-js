@@ -12,8 +12,19 @@
 {
     title: 'render',
     html: '<div id="renderNode" ></div>',
-    desc: '`render()`',
+    desc: '`template render`',
     file: './render.demo.js'
+}
+````
+
+## dataCount
+
+````demo
+{
+    title: 'dataCount',
+    html: '<div id="dataCountNode" ></div>',
+    desc: '`{{#dataCount}}共{{dataCount}}条数据{{/dataCount}}`',
+    file: './dataCount.demo.js'
 }
 ````
 

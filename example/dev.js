@@ -10,3 +10,6 @@ if (document.getElementById('ajaxNode')) {
 if (document.getElementById('moreOptionMore')) {
     require('./more-option.demo.js')
 }
+if (document.getElementById('dataCountNode')) {
+    require('./dataCount.demo.js')
+}

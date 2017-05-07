@@ -3,13 +3,15 @@ var mustache = require('mustache')
 var data = paging.createData({
     page: 9,
     pageSize: 10,
-    pageCount: 20,
+    dataCount: 232
 })
 data.link = "/news?page="
 var template = ''
 + '{{#hasPaging}}'
 + '    <div class="ui-paging">'
+
 + '        {{#dataCount}}共{{dataCount}}条数据{{/dataCount}}'
+
 + '        <{{#prevPage}}a{{/prevPage}}{{^prevPage}}span{{/prevPage}} class="ui-paging-prev" href="{{link}}{{prevPage}}">'
 + '            上一页'
 + '        </{{#prevPage}}a{{/prevPage}}{{^prevPage}}span{{/prevPage}}>'
@@ -38,4 +40,4 @@ var template = ''
 + '        <span class="ui-paging-info"><span class="ui-paging-bold">{{page}}/{{pageCount}}</span>页</span>'
 + '    </div>'
 + '{{/hasPaging}}'
-document.getElementById('renderNode').innerHTML = mustache.render(template, data)
+document.getElementById('dataCountNode').innerHTML = mustache.render(template, data)

@@ -15,6 +15,7 @@ var render = function (page, pageCount) {
     var template = ''
     + '{{#hasPaging}}'
     + '    <div class="ui-paging">'
+    + '        {{#dataCount}}共{{dataCount}}条数据{{/dataCount}}'
     + '        <{{#prevPage}}a{{/prevPage}}{{^prevPage}}span{{/prevPage}} class="ui-paging-prev" href="{{prevPage}}">'
     + '            上一页'
     + '        </{{#prevPage}}a{{/prevPage}}{{^prevPage}}span{{/prevPage}}>'
