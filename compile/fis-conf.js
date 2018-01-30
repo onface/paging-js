@@ -250,3 +250,5 @@ if (fis.project.currentMedia() === 'npm') {
         release: false
     })
 }
+
+userConfig.fis(fis)

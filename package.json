@@ -1,7 +1,7 @@
 {
     "name": "paging",
     "main": "lib/index.js",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "description": "paging generator | 分页生成器",
     "keywords": "",
     "scripts": {
@@ -17,7 +17,9 @@
     },
     "$username": "onface",
     "$repository": "paging-js",
-    "dependencies": {},
+    "dependencies": {
+        "qs": "^6.5.1"
+    },
     "devDependencies": {
         "babel": "^6.23.0",
         "babel-core": "^6.26.0",
@@ -37,6 +39,7 @@
         "ejs": "^2.5.7",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "^1.1.1",
+        "expect.js": "^0.3.1",
         "express": "^4.16.2",
         "extend": "^3.0.1",
         "fis-parser-less-2.x": "^0.1.4",
@@ -63,7 +66,7 @@
         "markrun": "^0.23.0",
         "mustache": "^2.3.0",
         "open": "^0.0.5",
-        "prop-types": "^15.6.0",
+        "prop-types": "0.2.0",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
         "react-hot-loader": "^4.0.0-beta.6",

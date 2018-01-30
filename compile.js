@@ -97,5 +97,10 @@ module.exports = {
                     version: '5.1'
                 }
         }
+    },
+    fis: function (fis) {
+        fis.match('lib/{renderStyleDefault,createDataDefault}.js', {
+            release: true
+        }, true)
     }
 }
