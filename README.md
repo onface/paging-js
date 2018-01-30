@@ -9,7 +9,7 @@
 <div class="face-one-intro">
     <div class="face-one-intro-title">paging</div>
     <h2 class="face-one-intro-desc">
-        paging generator | 分页生成器 Edit
+        分页渲染数据生成器
     </h2>
     <div class="face-one-intro-tool">
         <a href="https://onface.github.io/paging-js" class="face-one-intro-btn face-one-intro-btn--primary mr-online-hide" >在线文档</a>
@@ -27,7 +27,7 @@
                     <img src="./doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo">
                     <br />
                     <div class="face-one-feature-item-label">定制开发</div>
-                    <div class="face-one-feature-item-desc">提供底层接口便于二次开发</div>
+                    <div class="face-one-feature-item-desc">提供渲染数据接口便于二次开发</div>
                 </div>
             </td>
             <td align="center" >
@@ -35,15 +35,15 @@
                     <img src="./doc/theme/media/browser.svg" alt="" class="face-one-feature-item-photo">
                     <br />
                     <div class="face-one-feature-item-label">用户体验</div>
-                    <div class="face-one-feature-item-desc">界面细致、即时反馈，更好的用户体验</div>
+                    <div class="face-one-feature-item-desc">可配置跳转前/后指定页</div>
                 </div>
             </td>
             <td align="center" >
                 <div class="face-one-feature-item">
-                    <img src="./doc/theme/media/share.svg" alt="" class="face-one-feature-item-photo">
+                    <img src="./doc/theme/media/blog.svg" alt="" class="face-one-feature-item-photo">
                     <br />
-                    <div class="face-one-feature-item-label">逻辑封装</div>
-                    <div class="face-one-feature-item-desc">提供业务逻辑封装，快速开发</div>
+                    <div class="face-one-feature-item-label">快速开发</div>
+                    <div class="face-one-feature-item-desc">提供配套 <code>React</code> 版本</div>
                 </div>
             </td>
         </tr>

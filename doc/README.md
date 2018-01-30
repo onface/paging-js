@@ -1,25 +1,17 @@
 # 文档
 
+[./style.css](./style.css)
+````html
+<link rel="stylesheet" href="./style.css">
+````
 
 ````code
 {
     title: '基础使用',
-    desc: '**markdown**',
-    html: '<div id="basic-demo" ></div>',
+    desc: '`paging.render(pagingSettings, styleSettings)`',
+    html: '<div id="renderNode" ></div><hr /><div id="renderNodeTwo" ></div>',
     js: './basic.demo.js',
-    source: './Basic.js',
-    open: true
-}
-````
-
-
-````code
-{
-    title: 'Vue',
-    desc: '**markdown**',
-    html: '<div id="vue-demo" ></div>',
-    js: './vue.demo.js',
-    source: './Basic.vue',
+    source: './basic.demo.js',
     open: true
 }
 ````
