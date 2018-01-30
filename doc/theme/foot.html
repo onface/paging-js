@@ -1,0 +1,91 @@
+<script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/<%= PACKAGE.$username; %>/<%= PACKAGE.$repository; %>" class="face-one-foot-group-item-link"><%= PACKAGE.$repository; %></a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.github.io/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="http://onface.cc/" class="face-one-foot-group-item-link">onface.cc</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-users"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/<%= PACKAGE.$username; %>/<%= PACKAGE.$repository; %>/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/<%= PACKAGE.$username; %>/<%= PACKAGE.$repository; %>/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="/README.md" class="face-one-foot-copyright-title">
+                <img src="/doc/theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
