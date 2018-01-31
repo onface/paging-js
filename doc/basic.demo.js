@@ -48,7 +48,7 @@ node.appendChild(title)
 var dom = document.createElement('div')
 paging.render(
     {
-        page: 1,
+        page: 8,
         pageSize: 10,
         pageCount: 20
     },
