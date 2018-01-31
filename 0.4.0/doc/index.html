@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="文档">
+<title>文档</title>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="../index.html">
+        <img src="theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        face
+    </a>
+    <span class="face-one-head-slogan">
+        Write less code, do more things!
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="../index.html" class="face-one-head-nav-link">首页</a>
+            <a href="intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="index.html" class="face-one-head-nav-link">文档</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<div class="face-one-layout">
+<div class="face-one-layout-F-line">
+<div class="face-one-layout-sidebar">
+<div class="face-one-nav">
+<span class="face-one-nav-switch fi fi-angle-double-right"></span>
+<div class="face-one-nav-F-inner">
+<div class="face-one-nav-item">
+    <a href="intro.html" class="face-one-nav-item-label">指引</a>
+</div>
+<div class="face-one-nav-item face-one-nav-item--group face-one-nav-item--group-on">
+    <span class="face-one-nav-item-switch fi fi-angle-down"></span>
+    <span class="face-one-nav-item-label">
+        文档
+    </span>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">render</div>
+        <a href="index.html#render" class="face-one-nav-item-group-item">渲染DOM</a>
+        <a href="index.html#createData" class="face-one-nav-item-group-item">获取渲染数据</a>
+    </div>
+    <div class="face-one-nav-item-group">
+        <div class="face-one-nav-item-group-title">template</div>
+        <a href="index.html#template" class="face-one-nav-item-group-item">完全自定义界面</a>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="face-one-layout-cnt">
+<div id="face-one-cnt" class="face-one-cnt markdown-body">
+<div id="face-one-sidebar" class="face-one-sidebar"></div>
+<h1 id="文档" ><a class="markrun-anchor" href="../Users/nimo/Documents/git/paging-js/#文档"><span class="markrun-anchor-link"></span></a>文档</h1><p><code>render</code> 用于渲染 DOM ，如果你用到是 <code>React</code> 请使用 <a href="http://onface.github.io/paging.react">paging.react</a> 他们都是 <a href="http://github.com/onface">onface</a> 的作品</p>
+<blockquote>
+<p>如果你想完全自行封装，请使用 <code>paging.createData</code></p>
+</blockquote>
+<h2 id="render" ><a class="markrun-anchor" href="../Users/nimo/Documents/git/paging-js/#render"><span class="markrun-anchor-link"></span></a>render</h2><p>因为配置参数比较多，请根据界面效果，找到对应示例代码。</p>
+
+    <div class="face-one-code  face-one-code--open">
+                        <div class="face-one-code-example">
+                            <div id="renderNode" ></div>
+                        </div>
+                        <div class="face-one-code-info">
+                            <div class="face-one-code-info-title">渲染DOM</div>
+                            <div class="face-one-code-info-desc">
+                                <p>paging.render(<a href="../Users/nimo/Documents/git/lib/createDataDefault.js">createDataSettings</a>, <a href="../Users/nimo/Documents/git/lib/renderStyleDefault.js">styleSettings</a>, dom) 函数返回值是 渲染的HTML</p>
+                            </div>
+                            <span class="face-one-code-info-switchCode fi fi-code"></span>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-selector-tag">var</span> paging = require(<span class="hljs-string">'paging'</span>)
+
+<span class="hljs-function"><span class="hljs-title">require</span><span class="hljs-params">(<span class="hljs-string">'paging/lib/index.css'</span>)</span></span>
+
+<span class="hljs-selector-tag">var</span> node = document.getElementById(<span class="hljs-string">'renderNode'</span>)
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'默认'</span>
+node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">9</span>,
+        pageSize: <span class="hljs-number">10</span>,
+        pageCount: <span class="hljs-number">20</span>,
+        dataTotal: <span class="hljs-number">200</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        goto: true
+    },
+    dom
+)
+node.appendChild(dom)
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'group 风格'</span>
+node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">10</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        themes: <span class="hljs-string">'group'</span>
+    },
+    dom
+)
+node.appendChild(dom)
+
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'solid 风格'</span>
+node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">8</span>,
+        pageSize: <span class="hljs-number">10</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        themes: <span class="hljs-string">'solid'</span>
+    },
+    dom
+)
+node.appendChild(dom)
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'mini 风格'</span>
+node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">10</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        themes: <span class="hljs-string">'simple'</span>,
+        mini: true
+    },
+    dom
+)
+node.appendChild(dom)
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'goto'</span>
+node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">10</span>,
+        dataTotal: <span class="hljs-number">100</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        prevText: <span class="hljs-string">'&lt;'</span>,
+        nextText: <span class="hljs-string">'&gt;'</span>,
+        goto: true
+    },
+    dom
+)
+node.appendChild(dom)
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'text'</span>
+node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">10</span>,
+        dataTotal: <span class="hljs-number">100</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        prevText: <span class="hljs-string">'&lt;'</span>,
+        themes: <span class="hljs-string">'solid'</span>,
+        nextText: <span class="hljs-string">'&gt;'</span>,
+        dataTotalStartText: <span class="hljs-string">'Total:'</span>,
+        dataTotalEndText: <span class="hljs-string">'items.'</span>,
+        goto: true,
+        gotoStartText: <span class="hljs-string">'Go to'</span>,
+        gotoEndText: <span class="hljs-string">'page'</span>
+    },
+    dom
+)
+node.appendChild(dom)
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'自定义查询条件'</span>
+node.appendChild(title)
+    <span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h4'</span>)
+    title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'string'</span>
+    node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">1</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        query: <span class="hljs-string">'demo=1'</span>
+    },
+    dom
+)
+node.appendChild(dom)
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h4'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'object'</span>
+node.appendChild(title)
+
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">1</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        query: {
+            demo: <span class="hljs-number">2</span>
+        }
+    },
+    dom
+)
+node.appendChild(dom)
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'onChange'</span>
+node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">10</span>,
+        dataTotal: <span class="hljs-number">100</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        link: <span class="hljs-string">"p="</span>,
+        prevText: <span class="hljs-string">'&lt;'</span>,
+        nextText: <span class="hljs-string">'&gt;'</span>,
+        goto: true,
+        onChange: function (page, data) {
+            location<span class="hljs-selector-class">.href</span> = data.<span class="hljs-variable">$link</span> + page
+        }
+    },
+    dom
+)
+node.appendChild(dom)
+
+
+<span class="hljs-selector-tag">var</span> title = document.createElement(<span class="hljs-string">'h2'</span>)
+title<span class="hljs-selector-class">.innerHTML</span> = <span class="hljs-string">'mini onChange'</span>
+node.appendChild(title)
+<span class="hljs-selector-tag">var</span> dom = document.createElement(<span class="hljs-string">'div'</span>)
+paging.render(
+    {
+        page: <span class="hljs-number">1</span>,
+        pageSize: <span class="hljs-number">10</span>,
+        dataTotal: <span class="hljs-number">100</span>,
+        pageCount: <span class="hljs-number">20</span>
+    },
+    {
+        mini: true,
+        goto: false,
+        onChange: function (page, data) {
+            location<span class="hljs-selector-class">.href</span> = data.<span class="hljs-variable">$link</span> + page
+        }
+    },
+    dom
+)
+node.appendChild(dom)
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<h2 id="createData" ><a class="markrun-anchor" href="../Users/nimo/Documents/git/paging-js/#createData"><span class="markrun-anchor-link"></span></a>createData</h2>
+    <div class="face-one-code  face-one-code--open">
+                        <div class="face-one-code-example">
+                            <pre id="dataNode" ></pre>
+                        </div>
+                        <div class="face-one-code-info">
+                            <div class="face-one-code-info-title">获取渲染数据</div>
+                            <div class="face-one-code-info-desc">
+                                <p>渲染数据的作用请参考：<a href="https://github.com/onface/paging">Paging solution</a></p>
+                            </div>
+                            <span class="face-one-code-info-switchCode fi fi-code"></span>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="hljs-selector-tag">var</span> paging = require(<span class="hljs-string">'paging'</span>)
+<span class="hljs-selector-tag">var</span> jsonFormat = require(<span class="hljs-string">'json-format'</span>)
+document.getElementById(<span class="hljs-string">'dataNode'</span>)<span class="hljs-selector-class">.innerHTML</span> = jsonFormat(
+    paging.createData({
+        page: <span class="hljs-number">1</span>,
+        pageCount: <span class="hljs-number">20</span>
+    })
+)
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<h2 id="template" ><a class="markrun-anchor" href="../Users/nimo/Documents/git/paging-js/#template"><span class="markrun-anchor-link"></span></a>template</h2>
+    <div class="face-one-code  face-one-code--open">
+                        <div class="face-one-code-example">
+                            <div id="tempalteRenderNode" ></div><textarea id="templateNode" style="width:100%;height:16em;" ></textarea>
+                        </div>
+                        <div class="face-one-code-info">
+                            <div class="face-one-code-info-title">渲染模板</div>
+                            <div class="face-one-code-info-desc">
+                                <p><code>paging.render()</code> 的渲染模板,一般情况下不需要修改，但是要完全自定义样式时候，可参考此模板修改。 <strong>模板语法参考<a href="https://github.com/janl/mustache.js#templates">mustache</a></strong></p>
+                            </div>
+                            <span class="face-one-code-info-switchCode fi fi-code"></span>
+                        </div>
+                        <div class="face-one-code-source">
+                            <div class="face-one-code-source-tool">
+                                <span class="face-one-code-source-tool-copy fi fi-files-o"></span>
+                            </div>
+                            <pre><code class="lang-js"><span class="xml">var paging = require('paging')
+paging.render(
+    {
+        page: 1,
+        pageCount: 20
+    },
+    {
+        template: ''+
+        '<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{$link}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{prevPage}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>上一页<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>' +
+        '</span><span class="hljs-template-variable">{{page}}</span><span class="xml">/</span><span class="hljs-template-variable">{{pageCount}}</span><span class="xml">'+
+        '<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{$link}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"></span></span></span><span class="hljs-template-variable">{{nextPage}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>下一页<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>'
+    },
+    document.getElementById('tempalteRenderNode')
+)
+
+document.getElementById('templateNode').innerHTML = paging.template()</span>
+</code></pre>
+                        </div>
+                        
+                    </div>
+                                
+<script>
+if (!/keyword/.test(location.search)) {
+    history.replaceState({
+        keyword: 'nimo',
+        type: 'off'
+        }, 'mock query', "?keyword=nimo&type=off" + location.hash)
+}
+</script></div>
+</div>
+</div>
+</div>
+<script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/paging-js" class="face-one-foot-group-item-link">paging-js</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.github.io/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="http://onface.cc/" class="face-one-foot-group-item-link">onface.cc</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-users"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/paging-js/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/paging-js/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="../index.html" class="face-one-foot-copyright-title">
+                <img src="theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="theme/face/face.js" ></script>
+<script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./basic.demo.js?v=0.4.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./createData.demo.js?v=0.4.0"' + '" ></sc' + 'ript>')
+                        </script><script data-markrun-lastrun="true">
+                        document.write('<scri' + 'pt src="./template.demo.js?v=0.4.0"' + '" ></sc' + 'ript>')
+                        </script></body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/doc/theme/face.css">
+    <meta name="keywords" content="<%= PACKAGE.keywords; %>">
+    <meta name="description" content="<%- description?description:title %>">
+    <title><%- title %></title>
+</head>
+<body>
+<link rel="import" href="/doc/theme/head.html?__inline">
+<div class="face-one-post markdown-body">
+    <%- content %>
+</div>
+<link rel="import" href="/doc/theme/foot.html?__inline">
+<script src="/doc/theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="/doc/theme/face.js" ></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="doc/theme/face/face.css">
+<meta name="keywords" content="">
+<meta name="description" content="paging generator | 分页生成器">
+<title>paging</title>
+<style>h1, .mr-online-hide{display:none;}</style>
+</head>
+<body>
+<div class="face-one-head">
+    <a class="face-one-head-logo" href="index.html">
+        <img src="doc/theme/media/logo.svg" alt="" class="face-one-head-logo-photo" />
+        face
+    </a>
+    <span class="face-one-head-slogan">
+        Write less code, do more things!
+    </span>
+    <!-- <div class="face-one-head-search">
+        <span class="face-one-head-search-icon fi fi-search"></span>
+        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
+    </div> -->
+    <div class="face-one-head-nav">
+        <span class="face-one-head-nav-switch fi fi-bars"></span>
+        <div class="face-one-head-nav-F-cnt">
+            <a href="index.html" class="face-one-head-nav-link">首页</a>
+            <a href="doc/intro.html" class="face-one-head-nav-link">指引</a>
+            <a href="doc/index.html" class="face-one-head-nav-link">文档</a>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.face-one-head-nav-link')).forEach(function (node) {
+            if (node.href) {
+                var pathname = node.href.replace(/\?.*/, '')
+                if (pathname === location.origin + location.pathname) {
+                    node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-head-nav-link--on')
+                }
+            }
+        })
+        </script>
+    </div>
+</div>
+
+<h1 id="paging" ><a class="markrun-anchor" href="Users/nimo/Documents/git/paging-js/#paging"><span class="markrun-anchor-link"></span></a>paging</h1><!--MR-D{tpl: 'home'}-->
+<style>h1 {display:none;}</style>
+<div class="face-one-intro">
+    <div class="face-one-intro-title">paging</div>
+    <h2 class="face-one-intro-desc">
+        分页渲染数据生成器
+    </h2>
+    <div class="face-one-intro-tool">
+        <a href="https://onface.github.io/paging-js" class="face-one-intro-btn face-one-intro-btn--primary mr-online-hide" >在线文档</a>
+        <a href="./doc/intro.html" class="face-one-intro-btn face-one-intro-btn--primary">指引</a>
+            <a href="http://github.com/onface/paging-js" class="face-one-intro-btn">GITHUB</a>
+    </div>
+</div>
+<div class="face-one-feature">
+    <table style="width:100%;" data-comments="In order to github typesetting so use the table tag" >
+        <tr>
+            <td align="center" >
+                <div class="face-one-feature-item">
+                    <img src="doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo">
+                    <br />
+                    <div class="face-one-feature-item-label">定制开发</div>
+                    <div class="face-one-feature-item-desc">提供渲染数据接口便于二次开发</div>
+                </div>
+            </td>
+            <td align="center" >
+                <div class="face-one-feature-item">
+                    <img src="doc/theme/media/browser.svg" alt="" class="face-one-feature-item-photo">
+                    <br />
+                    <div class="face-one-feature-item-label">用户体验</div>
+                    <div class="face-one-feature-item-desc">可配置跳转前/后指定页</div>
+                </div>
+            </td>
+            <td align="center" >
+                <div class="face-one-feature-item">
+                    <img src="doc/theme/media/blog.svg" alt="" class="face-one-feature-item-photo">
+                    <br />
+                    <div class="face-one-feature-item-label">快速开发</div>
+                    <div class="face-one-feature-item-desc">提供配套 <code><a href="https://onface.github.io/paging.react">React</a></code> 版本</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="face-one-face-one-feature-title">
+    Creator
+</div>
+<div class="face-one-feature face-one-feature--creator">
+    <table style="width:100%;" data-comments="In order to github typesetting so use the table tag" >
+        <tr>
+            <td align="center" >
+                <a class="face-one-feature-item" href="https://github.com/nimojs">
+                    <img src="https://github.com/nimojs.png" width="150 height="150" alt="" class="face-one-feature-item-avatar">
+                    <br />
+                    <div class="face-one-feature-item-label">NimoChu</div>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div><script>
+Array.from(document.querySelectorAll('.face-one-nav-item-label')).forEach(function (node) {
+    if (node.href) {
+        var pathname = node.href.replace(/\?.*/, '')
+        if (pathname === location.origin + location.pathname + location.hash) {
+            node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-label--on')
+        }
+    }
+})
+var faceOneGetParent = function faceOneGetParent (el, className) {
+   if (el.parentNode.nodeName.toLowerCase() === 'html') {
+       return null
+   }
+   var parentClassName = el.parentNode.getAttribute('class')
+   var classNames = ''
+   if (parentClassName) {
+       classNames = parentClassName.split(' ')
+   }
+   if (classNames.indexOf(className) !== -1) {
+       return el.parentNode
+   }
+   else {
+       return faceOneGetParent(el.parentNode, className)
+   }
+}
+Array.from(document.querySelectorAll('.face-one-nav-item-group-item')).forEach(function (node) {
+    addAvativeClass(node)
+    function addAvativeClass (node)  {
+        if (node.href) {
+            var pathname = node.href.replace(/\?.*/, '')
+            if (pathname === location.origin + location.pathname + location.hash) {
+                node.setAttribute('class', node.getAttribute('class') + ' ' + 'face-one-nav-item-group-item--on')
+                var parentNode = faceOneGetParent(node, 'face-one-nav-item--group')
+                if (parentNode) {
+                    parentNode.setAttribute('class', parentNode.getAttribute('class') + ' ' + 'face-one-nav-item--group-on')
+                }
+            }
+        }
+    }
+
+})
+</script>
+<div class="face-one-foot">
+    <div class="face-one-foot-F-inner">
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-github"></span>
+                Github
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/paging-js" class="face-one-foot-group-item-link">paging-js</a>
+                - 项目源码
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-link"></span>
+                相关站点
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://onface.github.io/component-spec">component-spec</a>
+                - 组件规范
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/module" class="face-one-foot-group-item-link">module</a>
+                - 开源项目脚手架
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="http://onface.cc/" class="face-one-foot-group-item-link">onface.cc</a>
+                - 资源集合
+            </div>
+        </div>
+        <div class="face-one-foot-group">
+            <div class="face-one-foot-group-title">
+                <span class="face-one-foot-group-title-icon fi fi-users"></span>
+                社区
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/paging-js/issues" class="face-one-foot-group-item-link">Github issues</a>
+            </div>
+            <div class="face-one-foot-group-item">
+                <a href="https://github.com/onface/paging-js/issues/new" class="face-one-foot-group-item-link">提交bug</a>
+            </div>
+        </div>
+        <div class="face-one-foot-copyright">
+            <a href="index.html" class="face-one-foot-copyright-title">
+                <img src="doc/theme/media/logo.svg" class="face-one-foot-copyright-title-logo" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="doc/theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="doc/theme/face/face.js" ></script>
+</body>
+</html>
