@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/doc/theme/face/face.css">
+    <meta name="keywords" content="<%= PACKAGE.keywords; %>">
+    <meta name="description" content="<%- description?description:title %>">
+    <title><%- title %></title>
+</head>
+<body>
+<link rel="import" href="/doc/theme/head.html?__inline">
+<div class="face-one-layout">
+    <div class="face-one-layout-F-line">
+        <div class="face-one-layout-sidebar">
+            <div class="face-one-nav">
+                <span class="face-one-nav-switch fi fi-angle-double-right"></span>
+                <div class="face-one-nav-F-inner">
+                    <link rel="import" href="/doc/<%- navPath %>?__inline">
+                </div>
+            </div>
+        </div>
+        <div class="face-one-layout-cnt">
+            <div id="face-one-cnt" class="face-one-cnt markdown-body">
+                <div id="face-one-sidebar" class="face-one-sidebar"></div>
+                <%- content %>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="import" href="/doc/theme/foot.html?__inline">
+<script src="/doc/theme/jquery.js"></script>
+<script>delete window.$</script>
+<script src="/doc/theme/face/face.js" ></script>
+</body>
+</html>
