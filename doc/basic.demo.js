@@ -1,6 +1,8 @@
 var paging = require('paging')
-var node = document.getElementById('renderNode')
 
+require('paging/lib/index.css')
+
+var node = document.getElementById('renderNode')
 
 var title = document.createElement('h2')
 title.innerHTML = '默认'
@@ -10,10 +12,12 @@ paging.render(
     {
         page: 9,
         pageSize: 10,
-        pageCount: 20
+        pageCount: 20,
+        dataTotal: 200
     },
     {
-        link: "p="
+        link: "p=",
+        goto: true
     },
     dom
 )

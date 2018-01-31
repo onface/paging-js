@@ -2967,6 +2967,7 @@ html .face-one-sidebar > ul > li {
   padding-left: 1.6em;
   color: gray;
 }
+.face-one-foot-group-item a,
 .face-one-foot-group-item-link {
   text-decoration: none;
   color: #2d8cf0;

@@ -43,7 +43,7 @@
                     <img src="./doc/theme/media/blog.svg" alt="" class="face-one-feature-item-photo">
                     <br />
                     <div class="face-one-feature-item-label">快速开发</div>
-                    <div class="face-one-feature-item-desc">提供配套 <code>React</code> 版本</div>
+                    <div class="face-one-feature-item-desc">提供配套 <code><a href="https://onface.github.io/paging.react">React</a></code> 版本</div>
                 </div>
             </td>
         </tr>

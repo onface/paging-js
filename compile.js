@@ -1,3 +1,4 @@
+var path = require('path')
 module.exports = {
     less: {
         plugins: []
@@ -102,5 +103,13 @@ module.exports = {
         fis.match('lib/{renderStyleDefault,createDataDefault}.js', {
             release: true
         }, true)
+        fis.match('lib/index.less', {
+            release: true
+        }, true)
+    },
+    alias: {
+        'vue': 'vue/dist/vue.js',
+        './index.css': './index.less',
+        'paging/lib/index.css': path.resolve(__dirname, './lib/index.less')
     }
 }

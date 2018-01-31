@@ -50,6 +50,7 @@
         "hash-to-port": "^1.0.0",
         "is-absolute-url": "^2.1.0",
         "jasmine-core": "^2.8.0",
+        "json-format": "^1.0.1",
         "json5": "^0.5.1",
         "karma": "^2.0.0",
         "karma-babel-preprocessor": "^7.0.0",
