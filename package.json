@@ -1,7 +1,7 @@
 {
     "name": "paging",
     "main": "lib/index.js",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "paging generator | 分页生成器",
     "keywords": "",
     "scripts": {
@@ -20,7 +20,8 @@
     "dependencies": {
         "extend": "^3.0.1",
         "prop-types-0.2.0": "^0.2.0",
-        "qs": "^6.5.1"
+        "qs": "^6.5.1",
+        "mustache": "^2.3.0"
     },
     "devDependencies": {
         "babel": "^6.23.0",
@@ -66,7 +67,6 @@
         "less-plugin-functions": "^1.0.0",
         "livereload": "^0.6.3",
         "markrun": "^0.23.0",
-        "mustache": "^2.3.0",
         "open": "^0.0.5",
         "prop-types": "0.2.0",
         "react": "^16.2.0",
