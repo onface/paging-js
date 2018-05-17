@@ -1,0 +1,37 @@
+@import "./settings.less";
+.@{face-paging-prefix}--simple {
+    .@{face-paging-prefix}-item,
+    .@{face-paging-prefix}-prev,
+    .@{face-paging-prefix}-next,
+    .@{face-paging-prefix}-more,
+    {
+        display: inline-block;
+        color: @face-paging-text-color;
+        text-decoration: none;
+        &:hover {
+            color:@face-paging-primary-color;
+        }
+    }
+    .@{face-paging-prefix}-item--current {
+        color: @face-paging-primary-color;
+    }
+}
+
+.@{face-paging-prefix}--simple-mini {
+    .@{face-paging-prefix}-next,
+    .@{face-paging-prefix}-prev {
+        font-size: 1.2em;
+    }
+}
+.@{face-paging-prefix}-mini {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+html .@{face-paging-prefix}-mini-value {
+    width: 2em;
+    line-height: 1;
+}
+.@{face-paging-prefix}-mini-separate {
+    padding-left: .3em;
+    padding-right: .3em;
+}

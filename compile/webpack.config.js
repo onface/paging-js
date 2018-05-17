@@ -66,7 +66,14 @@ module.exports = {
                         options: compileConfig.babel
                     }
                 ]
-            }
+            },
+            { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1&minetype=application/font-woff&name=__media/[path][name]-[hash:6].[ext]' },
+            { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1&minetype=application/font-woff&name=__media/[path][name]-[hash:6].[ext]' },
+            { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1&minetype=application/octet-stream&name=__media/[path][name]-[hash:6].[ext]' },
+            { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
+            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1&minetype=image/svg+xml&name=__media/[path][name]-[hash:6].[ext]' },
+            { test: /\.(png|jpg|jpeg|gif)(\?v=\d+\.\d+\.\d+)?$/i, loader: 'url-loader?limit=1&name=__media/[path][name]-[hash:6].[ext]'},
+            { test: /\.json$/, loader: 'json-loader' }
         ]
     },
     resolve: {

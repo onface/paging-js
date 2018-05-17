@@ -1,0 +1,51 @@
+@import "./settings.less";
+.@{face-paging-prefix}--solid {
+    .@{face-paging-prefix}-item,
+    .@{face-paging-prefix}-prev,
+    .@{face-paging-prefix}-next,
+    .@{face-paging-prefix}-more,
+    {
+        background-color:white;
+        border:1px solid transparent;
+        border-radius: .3em;
+        padding-left: .3em;
+        padding-right: .3em;
+        min-width: 1.2em;
+        display: inline-block;
+        color: @face-paging-text-color;
+        text-decoration: none;
+        background-color: @face-paging-background-color;
+        &:hover {
+            background-color: @face-paging-primary-color;
+            color:white;
+            transition: none;
+        }
+        margin-left: .2em;
+        margin-right: .2em;
+    }
+    .@{face-paging-prefix}-item--current {
+        background-color: @face-paging-primary-color;
+        color:white;
+    }
+    .@{face-paging-prefix}-dataTotal {
+        font-size: 0.91em;
+    }
+    .@{face-paging-prefix}-goto {
+        font-size: 0.91em;
+    }
+    .@{face-paging-prefix}-goto-value {
+        border:1px solid @face-paging-border-color;
+        border-radius: .3em;
+        line-height: @face-paging-line-height;
+        padding-left: .3em;
+        padding-right: .3em;
+        min-width: 1.2em;
+    }
+    .@{face-paging-prefix}-next--disabled,
+    .@{face-paging-prefix}-prev--disabled {
+        &:hover {
+            background-color: #f7f7f7;
+            color: @face-paging-text-color;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 {
     "name": "paging",
     "main": "lib/index.js",
-    "version": "0.4.2",
+    "version": "0.5.0",
     "description": "paging generator | 分页生成器",
     "keywords": "",
     "scripts": {
@@ -19,9 +19,10 @@
     "$repository": "paging-js",
     "dependencies": {
         "extend": "^3.0.1",
+        "face-icon": "^0.1.1",
+        "mustache": "^2.3.0",
         "prop-types-0.2.0": "^0.2.0",
-        "qs": "^6.5.1",
-        "mustache": "^2.3.0"
+        "qs": "^6.5.1"
     },
     "devDependencies": {
         "babel": "^6.23.0",
@@ -44,6 +45,7 @@
         "enzyme-adapter-react-16": "^1.1.1",
         "expect.js": "^0.3.1",
         "express": "^4.16.2",
+        "file-loader": "^1.1.11",
         "fis-parser-less-2.x": "^0.1.4",
         "fis3-hook-relative": "^2.0.1",
         "fis3-parser-vue-component": "^5.5.1",
@@ -53,6 +55,7 @@
         "is-absolute-url": "^2.1.0",
         "jasmine-core": "^2.8.0",
         "json-format": "^1.0.1",
+        "json-loader": "^0.5.7",
         "json5": "^0.5.1",
         "karma": "^2.0.0",
         "karma-babel-preprocessor": "^7.0.0",
@@ -73,6 +76,7 @@
         "react-dom": "^16.2.0",
         "react-hot-loader": "^4.0.0-beta.6",
         "style-loader": "^0.13.1",
+        "url-loader": "^1.0.1",
         "util.react": "^1.4.1",
         "vue": "^2.5.13",
         "vue-loader": "^13.6.1",

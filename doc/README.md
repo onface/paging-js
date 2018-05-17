@@ -4,6 +4,9 @@
 
 > 如果你想完全自行封装，请使用 `paging.createData`
 
+
+ **自定义样式：** 下载[lib/less](https://github.com/onface/paging-js/tree/master/lib/less) 中的文件，并在修改后加载自定义样式。并修改 `paging.render(pageData, style)` 中的 `style.prefixClassName`  比如： `{prefixClassName: 'my-paging'}`
+
 ## render
 
 因为配置参数比较多，请根据界面效果，找到对应示例代码。

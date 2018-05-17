@@ -1,0 +1,132 @@
+@import "./settings.less";
+.@{face-paging-prefix} {
+    text-align: center;
+    color: @face-paging-text-color;
+    line-height: @face-paging-line-height;
+    a:hover {
+        text-decoration: none;
+    }
+}
+@import "./ghost.less";
+@import "./solid.less";
+@import "./simple.less";
+@import "./group.less";
+@import "./full.less";
+
+.@{face-paging-prefix}-dataTotal {
+    color:#666;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.@{face-paging-prefix}-goto {
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.@{face-paging-prefix}-goto-submit {
+    color:inherit;
+    line-height: inherit;
+    padding: 0;
+    &:focus {
+        outline: none;
+        border-color:@face-pading-focus-border-color;
+        box-shadow: 0 0 0 0.125em @face-pading-focus-color;
+    }
+}
+.@{face-paging-prefix}-mini-value,
+.@{face-paging-prefix}-goto-value {
+    padding:0;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    border:1px solid @face-paging-border-color;
+    border-radius: .3em;
+    line-height: inherit;
+    width: 2.4em;
+    padding-left: .3em;
+    padding-right: .3em;
+    color: @face-paging-text-color;
+    &:focus {
+        outline: none;
+        border-color:@face-pading-focus-border-color;
+        box-shadow: 0 0 0 0.125em @face-pading-focus-color;
+    }
+}
+
+.@{face-paging-prefix}-item,
+.@{face-paging-prefix}-more,
+{
+    min-width: 2em;
+}
+.@{face-paging-prefix}-prev,
+.@{face-paging-prefix}-next,
+{
+    min-width: 1em;
+}
+
+.@{face-paging-prefix}--prev-disabled {
+    .@{face-paging-prefix}-prev {
+        &,
+        &:hover {
+            color: @face-paging-disabled-text-color;
+        }
+        cursor: not-allowed;
+    }
+}
+.@{face-paging-prefix}--next-disabled {
+    .@{face-paging-prefix}-next {
+        &,
+        &:hover {
+            color: @face-paging-disabled-text-color;
+        }
+        cursor: not-allowed;
+    }
+}
+.@{face-paging-prefix}-prev {
+
+}
+.@{face-paging-prefix}-prev-icon,
+.@{face-paging-prefix}-next-icon {
+    transform: scale(.6);
+}
+.@{face-paging-prefix}-more {
+    min-width: 1em;
+    &:hover {
+        .@{face-paging-prefix}-more-icon {
+            display: block;
+        }
+        .@{face-paging-prefix}-more-text {
+            display: none;
+        }
+    }
+}
+.@{face-paging-prefix}-more--prev {
+
+}
+.@{face-paging-prefix}-more--next {
+
+}
+
+.@{face-paging-prefix}-more-text {
+    vertical-align: top;
+    position: relative;
+    top:-.25em;
+}
+.@{face-paging-prefix}-more-icon {
+    display: none;
+}
+.@{face-paging-prefix}-item {
+
+}
+.@{face-paging-prefix}-next {
+
+}
+.@{face-paging-prefix}-goto-submit {
+    border:1px solid @face-paging-border-color;
+    background-color: white;
+    border-radius: .3em;
+    padding-left: .3em;
+    padding-right: .3em;
+    box-sizing: border-box;
+    cursor: pointer;
+}

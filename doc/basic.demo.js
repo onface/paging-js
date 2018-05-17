@@ -1,9 +1,6 @@
 var paging = require('paging')
-
-require('paging/lib/index.css')
-
 var node = document.getElementById('renderNode')
-
+require('face-icon/lib/index.css')
 var title = document.createElement('h2')
 title.innerHTML = '默认'
 node.appendChild(title)
@@ -43,6 +40,25 @@ node.appendChild(dom)
 
 
 var title = document.createElement('h2')
+title.innerHTML = 'group group-solid 风格'
+node.appendChild(title)
+var dom = document.createElement('div')
+paging.render(
+    {
+        page: 1,
+        pageSize: 10,
+        pageCount: 20
+    },
+    {
+        link: "p=",
+        themes: 'group group-solid'
+    },
+    dom
+)
+node.appendChild(dom)
+
+
+var title = document.createElement('h2')
 title.innerHTML = 'solid 风格'
 node.appendChild(title)
 var dom = document.createElement('div')
@@ -55,6 +71,26 @@ paging.render(
     {
         link: "p=",
         themes: 'solid'
+    },
+    dom
+)
+node.appendChild(dom)
+
+var title = document.createElement('h2')
+title.innerHTML = 'full 风格'
+node.appendChild(title)
+var dom = document.createElement('div')
+paging.render(
+    {
+        page: 8,
+        pageSize: 10,
+        pageCount: 20,
+        dataTotal: 201
+    },
+    {
+        link: "p=",
+        themes: 'full',
+        goto: true
     },
     dom
 )
@@ -92,8 +128,10 @@ paging.render(
     },
     {
         link: "p=",
-        prevText: '<',
-        nextText: '>',
+        text: {
+            prev: '<span class="fi fi-double-left"></span>',
+            next: '<span class="fi fi-double-right"></span>'
+        },
         goto: true
     },
     dom
@@ -113,14 +151,20 @@ paging.render(
     },
     {
         link: "p=",
-        prevText: '<',
         themes: 'solid',
-        nextText: '>',
-        dataTotalStartText: 'Total:',
-        dataTotalEndText: 'items.',
-        goto: true,
-        gotoStartText: 'Go to',
-        gotoEndText: 'page'
+        text: {
+            prev: '<',
+            next: '>',
+            dataTotal: {
+                before: 'Total:',
+                after: 'items.'
+            },
+            goto: {
+                before : 'Go to',
+                after: 'page.'
+            }
+        },
+        goto: true
     },
     dom
 )
@@ -179,8 +223,10 @@ paging.render(
     },
     {
         link: "p=",
-        prevText: '<',
-        nextText: '>',
+        text: {
+            prev: '<',
+            next: '>'
+        },
         goto: true,
         onChange: function (page, data) {
             location.href = data.$link + page
