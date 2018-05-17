@@ -1,0 +1,64 @@
+.face-paging--group .face-paging-item,
+.face-paging--group .face-paging-prev,
+.face-paging--group .face-paging-next,
+.face-paging--group .face-paging-more {
+  background-color: white;
+  position: relative;
+  border: 1px solid #d9d9d9;
+  margin-left: -1px;
+  padding-left: .3em;
+  padding-right: .3em;
+  min-width: 1.2em;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: none;
+}
+.face-paging--group .face-paging-item:hover,
+.face-paging--group .face-paging-prev:hover,
+.face-paging--group .face-paging-next:hover,
+.face-paging--group .face-paging-more:hover {
+  z-index: 2;
+  color: #4387fd;
+  border-color: #4387fd;
+}
+.face-paging--group .face-paging-prev {
+  border-top-left-radius: .3em;
+  border-bottom-left-radius: .3em;
+}
+.face-paging--group .face-paging-next {
+  border-top-right-radius: .3em;
+  border-bottom-right-radius: .3em;
+}
+.face-paging--group .face-paging-item--current {
+  z-index: 2;
+  color: #4387fd;
+  border-color: #4387fd;
+}
+.face-paging--group .face-paging-dataTotal {
+  font-size: 0.91em;
+}
+.face-paging--group .face-paging-goto {
+  font-size: 0.91em;
+}
+.face-paging--group .face-paging-goto-value {
+  border: 1px solid #d9d9d9;
+  border-radius: .3em;
+  padding-left: .3em;
+  padding-right: .3em;
+  min-width: 1.2em;
+}
+.face-paging--group .face-paging-next--disabled:hover,
+.face-paging--group .face-paging-prev--disabled:hover {
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.55);
+}
+.face-paging--group-solid .face-paging-item,
+.face-paging--group-solid .face-paging-prev,
+.face-paging--group-solid .face-paging-next,
+.face-paging--group-solid .face-paging-more {
+  background-color: white;
+}
+.face-paging--group-solid .face-paging-item--current {
+  background-color: #4387fd;
+  color: white;
+}

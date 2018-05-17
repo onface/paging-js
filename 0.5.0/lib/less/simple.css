@@ -1,0 +1,33 @@
+.face-paging--simple .face-paging-item,
+.face-paging--simple .face-paging-prev,
+.face-paging--simple .face-paging-next,
+.face-paging--simple .face-paging-more {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: none;
+}
+.face-paging--simple .face-paging-item:hover,
+.face-paging--simple .face-paging-prev:hover,
+.face-paging--simple .face-paging-next:hover,
+.face-paging--simple .face-paging-more:hover {
+  color: #4387fd;
+}
+.face-paging--simple .face-paging-item--current {
+  color: #4387fd;
+}
+.face-paging--simple-mini .face-paging-next,
+.face-paging--simple-mini .face-paging-prev {
+  font-size: 1.2em;
+}
+.face-paging-mini {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+html .face-paging-mini-value {
+  width: 2em;
+  line-height: 1;
+}
+.face-paging-mini-separate {
+  padding-left: .3em;
+  padding-right: .3em;
+}

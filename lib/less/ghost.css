@@ -1,0 +1,46 @@
+.face-paging--ghost .face-paging-item,
+.face-paging--ghost .face-paging-prev,
+.face-paging--ghost .face-paging-next,
+.face-paging--ghost .face-paging-more {
+  background-color: white;
+  border: 1px solid #d9d9d9;
+  border-radius: .3em;
+  padding-left: .3em;
+  padding-right: .3em;
+  min-width: 1.2em;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: none;
+  margin-left: .2em;
+  margin-right: .2em;
+}
+.face-paging--ghost .face-paging-item:hover,
+.face-paging--ghost .face-paging-prev:hover,
+.face-paging--ghost .face-paging-next:hover,
+.face-paging--ghost .face-paging-more:hover {
+  color: #4387fd;
+  border-color: #4387fd;
+}
+.face-paging--ghost .face-paging-item--current {
+  color: #4387fd;
+  border-color: #4387fd;
+}
+.face-paging--ghost .face-paging-dataTotal {
+  font-size: 0.91em;
+}
+.face-paging--ghost .face-paging-goto {
+  font-size: 0.91em;
+}
+.face-paging--ghost .face-paging-goto-value {
+  border: 1px solid #d9d9d9;
+  border-radius: .3em;
+  line-height: 1.8;
+  padding-left: .3em;
+  padding-right: .3em;
+  min-width: 1.2em;
+}
+.face-paging--ghost .face-paging-next--disabled:hover,
+.face-paging--ghost .face-paging-prev--disabled:hover {
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.55);
+}

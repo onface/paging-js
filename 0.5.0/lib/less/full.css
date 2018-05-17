@@ -1,0 +1,43 @@
+.face-paging--full .face-paging-dataTotal {
+  float: left;
+}
+.face-paging--full .face-paging-goto {
+  float: right;
+}
+.face-paging--full .face-paging-item,
+.face-paging--full .face-paging-prev,
+.face-paging--full .face-paging-next,
+.face-paging--full .face-paging-more {
+  background-color: white;
+  position: relative;
+  border: 1px solid #d9d9d9;
+  margin-left: -1px;
+  padding-left: .3em;
+  padding-right: .3em;
+  min-width: 1.2em;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.55);
+  text-decoration: none;
+  margin-right: .15em;
+  margin-left: .15em;
+}
+.face-paging--full .face-paging-item:hover,
+.face-paging--full .face-paging-prev:hover,
+.face-paging--full .face-paging-next:hover,
+.face-paging--full .face-paging-more:hover {
+  z-index: 2;
+  color: #4387fd;
+  border-color: #4387fd;
+}
+.face-paging--full .face-paging-item--current {
+  background-color: #4387fd;
+  border-color: #4387fd;
+  color: white;
+}
+.face-paging--full .face-paging-goto-submit,
+.face-paging--full .face-paging-goto-value {
+  border-radius: 0;
+}
+.face-paging--full .face-paging-goto-value {
+  margin-right: .1em;
+}
